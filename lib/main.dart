@@ -1,3 +1,4 @@
+import 'package:dream_job_flutter/account.dart';
 import 'package:dream_job_flutter/firebase_options.dart';
 import 'package:dream_job_flutter/home.dart';
 import 'package:dream_job_flutter/login.dart';
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(debugShowCheckedModeBanner: false,
      
-      home:Login()
+      home:Home()
     );
   }
 }

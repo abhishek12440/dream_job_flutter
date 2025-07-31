@@ -1,9 +1,15 @@
+import 'package:dream_job_flutter/account.dart';
 import 'package:dream_job_flutter/login.dart';
 import 'package:flutter/material.dart';
 
-class Home extends StatelessWidget {
+class Home extends StatefulWidget {
   const Home({super.key});
 
+  @override
+  State<Home> createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,21 +38,33 @@ class Home extends StatelessWidget {
             SizedBox(height: 20),
             Text(
               "Explore all the existing job roles based on your interest and study major",
-            ),SizedBox(height: 50,),
+            ),
+            SizedBox(height: 50),
             Row(
               children: [
                 Padding(
                   padding: const EdgeInsets.only(left: 160),
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Login()),
+                  );},
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.orange,
+                      foregroundColor: Colors.white,
+                    ),
                     child: Text(
                       "login",
                       style: TextStyle(fontWeight: FontWeight.bold),
                     ),
                   ),
-                ),SizedBox(width: 20,),
+                ),
+                SizedBox(width: 20),
                 GestureDetector(
-                  onTap: () {},
+                  onTap: () {Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Account()),
+                  );},
                   child: Text(
                     "register",
                     style: TextStyle(fontWeight: FontWeight.bold),
