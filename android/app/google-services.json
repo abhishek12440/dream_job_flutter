@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "571799920963",
+    "project_id": "dreamjob-c2b93",
+    "storage_bucket": "dreamjob-c2b93.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:571799920963:android:e4d62654dca0b00dce4ff6",
+        "android_client_info": {
+          "package_name": "com.example.dream_job_flutter"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCExSv_cWhNtwCOWMT17C1fUBfStUqhziM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
