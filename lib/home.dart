@@ -49,9 +49,9 @@ class _HomeState extends State<Home> {
                     context,
                     MaterialPageRoute(builder: (context) => Login()),
                   );},
-                    style: ElevatedButton.styleFrom(
+                    style: ElevatedButton.styleFrom(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
                       backgroundColor: Colors.orange,
-                      foregroundColor: Colors.white,
+                      foregroundColor: const Color.fromARGB(222, 248, 247, 247),
                     ),
                     child: Text(
                       "login",
@@ -59,7 +59,7 @@ class _HomeState extends State<Home> {
                     ),
                   ),
                 ),
-                SizedBox(width: 20),
+                SizedBox(width: 40),
                 GestureDetector(
                   onTap: () {Navigator.push(
                     context,

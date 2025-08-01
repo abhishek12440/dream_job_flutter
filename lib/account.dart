@@ -1,4 +1,5 @@
 import 'package:dream_job_flutter/login.dart';
+import 'package:dream_job_flutter/service.dart';
 import 'package:flutter/material.dart';
 
 class Account extends StatefulWidget {
@@ -31,7 +32,8 @@ class _AccountState extends State<Account> {
             SizedBox(height: 20),
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: TextField(
+              child: TextFormField(
+                controller: Emailcontroller,
                 decoration: InputDecoration(
                   fillColor: const Color.fromARGB(255, 248, 223, 187),
                   filled: true,
@@ -43,7 +45,8 @@ class _AccountState extends State<Account> {
             SizedBox(height: 20),
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: TextField(
+              child: TextFormField(
+                controller: Passwordcontroller,
                 decoration: InputDecoration(
                   fillColor: const Color.fromARGB(255, 248, 223, 187),
                   filled: true,
@@ -55,7 +58,8 @@ class _AccountState extends State<Account> {
             SizedBox(height: 20),
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: TextField(
+              child: TextFormField(
+                controller: confirmpasswordcontroller,
                 decoration: InputDecoration(
                   fillColor: const Color.fromARGB(255, 248, 223, 187),
                   filled: true,
@@ -66,7 +70,14 @@ class _AccountState extends State<Account> {
             ),
             SizedBox(height: 50),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                create(
+                  context: context,
+                  email: Emailcontroller.text,
+                  password: Passwordcontroller.text,
+                  confirmpassword: confirmpasswordcontroller.text,
+                );
+              },
               style: ElevatedButton.styleFrom(
                 backgroundColor: const Color.fromARGB(255, 245, 190, 10),
                 foregroundColor: Colors.white,

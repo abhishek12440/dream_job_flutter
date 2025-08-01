@@ -1,4 +1,5 @@
 import 'package:dream_job_flutter/account.dart';
+import 'package:dream_job_flutter/service.dart';
 import 'package:flutter/material.dart';
 
 class Login extends StatefulWidget {
@@ -9,8 +10,8 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
-  TextEditingController Emailcontroller = TextEditingController();
-  TextEditingController Passwordcontroller = TextEditingController();
+  TextEditingController Emailcount = TextEditingController();
+  TextEditingController Passwordcount = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +36,8 @@ class _LoginState extends State<Login> {
             SizedBox(height: 30),
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: TextField(
+              child: TextFormField(
+                controller: Emailcount,
                 decoration: InputDecoration(
                   fillColor: const Color.fromARGB(255, 248, 223, 187),
                   filled: true,
@@ -47,7 +49,8 @@ class _LoginState extends State<Login> {
             SizedBox(height: 20),
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: TextField(
+              child: TextFormField(
+                controller: Passwordcount,
                 decoration: InputDecoration(
                   fillColor: const Color.fromARGB(255, 248, 223, 187),
                   filled: true,
@@ -72,7 +75,13 @@ class _LoginState extends State<Login> {
             ),
             SizedBox(height: 50),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                login(
+                  context: context,
+                  email: Emailcount.text,
+                  password: Passwordcount.text,
+                );
+              },
               style: ElevatedButton.styleFrom(
                 backgroundColor: const Color.fromARGB(255, 245, 190, 10),
                 foregroundColor: Colors.white,
