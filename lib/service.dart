@@ -32,13 +32,30 @@ Future<void> create({
     await FirebaseAuth.instance.createUserWithEmailAndPassword(
       email: email,
       password: password,
-    
-
     );
 
     ScaffoldMessenger.of(
       context,
     ).showSnackBar(SnackBar(content: Text("Register successfully")));
+  } catch (e) {
+    ScaffoldMessenger.of(
+      context,
+    ).showSnackBar(SnackBar(content: Text(e.toString())));
+  }
+}
+
+Future<void> forget({
+  required BuildContext context,
+  required String email,
+}) async {
+  try {
+    await FirebaseAuth.instance.sendPasswordResetEmail(
+    email: email,
+    );
+
+    ScaffoldMessenger.of(
+      context,
+    ).showSnackBar(SnackBar(content: Text("Link sent successfully")));
   } catch (e) {
     ScaffoldMessenger.of(
       context,

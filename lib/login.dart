@@ -1,4 +1,5 @@
 import 'package:dream_job_flutter/account.dart';
+import 'package:dream_job_flutter/forgot.dart';
 import 'package:dream_job_flutter/service.dart';
 import 'package:flutter/material.dart';
 
@@ -61,7 +62,10 @@ class _LoginState extends State<Login> {
             ),
             SizedBox(height: 20),
             GestureDetector(
-              onTap: () {},
+              onTap: () {Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Forget()),
+                  );},
               child: Padding(
                 padding: const EdgeInsets.only(left: 350),
                 child: Text(
@@ -94,7 +98,12 @@ class _LoginState extends State<Login> {
               ),
             ),
             SizedBox(height: 40),
-            GestureDetector(
+            GestureDetector(onTap: () {
+              Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Account()),
+                  );
+            },
               child: Text(
                 "create a new account",
                 style: TextStyle(fontWeight: FontWeight.bold),

@@ -97,12 +97,19 @@ class _AccountState extends State<Account> {
                   MaterialPageRoute(builder: (context) => Login()),
                 );
               },
-
-              child: Text(
-                "Already have an account ",
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: const Color.fromARGB(255, 6, 6, 5),
+              
+              child: GestureDetector(onTap: () {Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Login()),
+                  );},
+                
+              
+                child: Text(
+                  "Already have an account ",
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: const Color.fromARGB(255, 6, 6, 5),
+                  ),
                 ),
               ),
             ),

@@ -1,5 +1,6 @@
 import 'package:dream_job_flutter/account.dart';
 import 'package:dream_job_flutter/firebase_options.dart';
+import 'package:dream_job_flutter/forgot.dart';
 import 'package:dream_job_flutter/home.dart';
 import 'package:dream_job_flutter/login.dart';
 import 'package:firebase_core/firebase_core.dart';
